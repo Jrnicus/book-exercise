@@ -61,7 +61,7 @@ class Book
     /**
      * This method will print the details about the book
      * The following details about the book will be printed
-     * Author, title, and number of pages
+     * Author, title, number of pages and refrence number
      */
     public void printDetails()
     {
@@ -69,6 +69,13 @@ class Book
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Pages: " + pages);
+        
+        if(refNumber.length() > 0){        
+            System.out.println("Refrence Number: " + refNumber);
+        }
+        else{
+            System.out.println("ZZZ");
+        }
     }
     /**
      * This method will allow us to enter a refrence number
