@@ -57,6 +57,18 @@ class Book
     {
         return pages;
     }
+    /**
+     * This method will print the details about the book
+     * The following details about the book will be printed
+     * Author, title, and number of pages
+     */
+    public void printDetails()
+    {
+        System.out.println("These are the details for the book");
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Pages: " + pages);
+    }
     
         
     // Add the methods her
