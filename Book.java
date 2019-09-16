@@ -11,6 +11,7 @@ class Book
      // The fields.
     private String author;
     private String title;
+    private int pages;
 
     /**
      * Set the author and title fields when this object
@@ -48,6 +49,13 @@ class Book
     public void printTitle()
     {
         System.out.println("The title of the book is " + title);
+    }
+    /**
+     * Method to get the number of pages in the book
+     */
+    public int getPages()
+    {
+        return pages;
     }
     
         
