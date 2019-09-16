@@ -3,7 +3,7 @@
  * This might form part of a larger application such
  * as a library system, for instance.
  *
- * @author (Insert your name here.)
+ * @author (Steve Cate)
  * @version (Insert today's date here.)
  */
 class Book
@@ -79,11 +79,18 @@ class Book
     }
     /**
      * This method will allow us to enter a refrence number
-     * for the book
+     * for the book.
+     * The refrence number must be atleast 3 charecters long
      */
     public void setRefNumber(String ref)
     {
-        refNumber = ref;
+        if(ref.length() >= 3){
+            refNumber = ref;
+        }
+        else{
+            System.out.println("Error the refrence number must" +
+            "be atleast 3 charecters long");
+        }
     }
     /**
      * This method will get the refrence number for the book
