@@ -4,7 +4,7 @@
  * as a library system, for instance.
  *
  * @author (Steve Cate)
- * @version (Insert today's date here.)
+ * @version (9/16/2019)
  */
 class Book
 {
