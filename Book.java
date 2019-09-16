@@ -13,6 +13,7 @@ class Book
     private String title;
     private int pages;
     private String refNumber;
+    private int barrowed;
 
     /**
      * Set the author and title fields when this object
@@ -61,7 +62,8 @@ class Book
     /**
      * This method will print the details about the book
      * The following details about the book will be printed
-     * Author, title, number of pages and refrence number
+     * Author, title, number of pages, refrence number,
+     * and how many times a book has been barrowed
      */
     public void printDetails()
     {
@@ -69,6 +71,7 @@ class Book
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Pages: " + pages);
+        System.out.println("Barrowed: " + barrowed);
         
         if(refNumber.length() > 0){        
             System.out.println("Refrence Number: " + refNumber);
@@ -99,6 +102,24 @@ class Book
     {
         return refNumber;
     }
+    /**
+     * This method will add one to barrowed each time
+     * a book gets barrowed to keep track of how many total 
+     * time this book has been barrowed
+     */
+    public void barrow()
+    {
+        barrowed++;
+    }
+    /**
+     * This method will return how many times a book
+     * has been barrowed
+     */
+    public int getBorrowed()
+    {
+        return barrowed;
+    }
+    
     
         
     // Add the methods her
