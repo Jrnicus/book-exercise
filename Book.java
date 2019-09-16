@@ -13,16 +13,19 @@ class Book
     private String title;
     private int pages;
     private String refNumber;
-    private int barrowed;
+    private int borrowed;
+    private boolean courseText;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean bookCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
+        pages = bookPages;
+        courseText = bookCourseText;
     }
     /**
      * Method to get the author of the book
@@ -71,7 +74,7 @@ class Book
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Pages: " + pages);
-        System.out.println("Barrowed: " + barrowed);
+        System.out.println("Barrowed: " + borrowed);
         
         if(refNumber.length() > 0){        
             System.out.println("Refrence Number: " + refNumber);
@@ -107,9 +110,9 @@ class Book
      * a book gets barrowed to keep track of how many total 
      * time this book has been barrowed
      */
-    public void barrow()
+    public void borrow()
     {
-        barrowed++;
+        borrowed++;
     }
     /**
      * This method will return how many times a book
@@ -117,9 +120,16 @@ class Book
      */
     public int getBorrowed()
     {
-        return barrowed;
+        return borrowed;
     }
-    
+    /**
+     * This method will retuern if the book is
+     * a text book or not
+     */
+    public boolean isCourseText()
+    {
+        return courseText;
+    }
     
         
     // Add the methods her
